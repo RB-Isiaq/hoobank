@@ -1,19 +1,10 @@
-"use client";
 import { feedback } from "@constants";
 import styles from "@styles/style";
 import FeedbackCard from "./FeedbackCard";
-import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
-      viewport={{ once: true }}
+    <section
       id="clients"
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}
     >
@@ -36,7 +27,7 @@ const Testimonials = () => {
           <FeedbackCard key={card.id} {...card} />
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 
